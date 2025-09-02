@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #4b83c7; /* Azul cielo, color de la bandera de Guatemala */
+    color: #333;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+}
+
+.screen {
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    color: #0c3b87; /* Un azul más oscuro */
+}
+
+input[type="text"], button {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: calc(100% - 22px);
+}
+
+button {
+    background-color: #0c3b87;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #082d6b;
+}
+
+/* Estilos de la tarjeta de lotería - AHORA 3x3 */
+#board-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px auto;
+}
+
+.card-cell {
+    width: 150px; /* Tamaño más grande para la imagen */
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card-cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-cell.marked::after {
+    content: 'X';
+    color: red;
+    font-size: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    border-radius: 50%;
+}
+
+/* Estilo para la ruleta de símbolos */
+#current-symbol-img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-top: 10px;
+}
+
+#loteria-button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
+    border: none;
+}
+
+#loteria-button:hover {
+    background-color: #45a049;
+}
